@@ -10,6 +10,9 @@ module.exports = {
   },
   plugins: [
     new CleanWebpackPlugin(['dist']),
+    new CopyWebpackPlugin([
+      { from: 'src/favicon' }
+    ]),
     new HtmlWebpackPlugin({
       title: 'Labirinto Maluco',
       template: 'src/index.html'
